@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.askovorodko.exception.NotFoundException;
 import org.askovorodko.model.Post;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,6 +13,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 
 
+@Repository
 public class PostRepository {
 
     private static final Logger logger = LogManager.getLogger(PostRepository.class);

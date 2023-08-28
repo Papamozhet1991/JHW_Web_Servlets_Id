@@ -4,10 +4,12 @@ import lombok.AllArgsConstructor;
 import org.askovorodko.exception.NotFoundException;
 import org.askovorodko.model.Post;
 import org.askovorodko.repository.PostRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @AllArgsConstructor
+@Service
 public class PostService {
     private final PostRepository repository;
 

@@ -2,7 +2,6 @@ package org.askovorodko.servlet;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.askovorodko.config.ServerConfig;
 import org.askovorodko.controller.PostController;
 import org.askovorodko.repository.PostRepository;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -19,7 +18,7 @@ public class MainServlet extends HttpServlet {
 
     @Override
     public void init() {
-        final var context = new AnnotationConfigApplicationContext(ServerConfig.class);
+        final var context = new AnnotationConfigApplicationContext("org.dromakin");
         controller = context.getBean(PostController.class);
     }
 
